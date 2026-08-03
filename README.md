@@ -2,7 +2,7 @@
 
 [![WindowsGSH](.github/assets/windowsgsh-badge.svg)](https://windowsgsh.com)
 [![Status](https://img.shields.io/badge/status-needs_live_test-F59E0B)](#status)
-[![Module version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FWindowsGSH%2FWindowsGSH.AbioticFactor%2Fmain%2FAbioticFactor.mod%2Fmodule.json&query=%24.version&prefix=v&label=module&color=F0B323)](AbioticFactor.mod/module.json)
+[![Module version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FWindowsGSH%2FWindowsGSH.AbioticFactor%2Fmain%2FAbioticFactor.mod%2Fmodule.json&query=%24.version&prefix=v&label=module&color=0F766E)](AbioticFactor.mod/module.json)
 [![Requires WindowsGSH](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FWindowsGSH%2FWindowsGSH.AbioticFactor%2Fmain%2FAbioticFactor.mod%2Fmodule.json%3Fbadge%3Dminimum&query=%24.minimumWindowsGshVersion&prefix=v&label=requires%20WindowsGSH&color=2563EB)](AbioticFactor.mod/module.json)
 [![Licence](https://img.shields.io/badge/licence-MIT-64748B)](LICENSE.md)
 
