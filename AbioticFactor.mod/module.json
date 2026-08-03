@@ -1,0 +1,176 @@
+{
+  "id": "abiotic-factor",
+  "name": "Abiotic Factor Dedicated Server",
+  "version": "1.1.0",
+  "author": "Shenniko",
+  "description": "WindowsGSH module for Abiotic Factor dedicated servers.",
+  "url": "https://github.com/WindowsGSH/WindowsGSH.AbioticFactor",
+  "homepage": "https://www.abioticfactor.com/",
+  "repository": "https://github.com/WindowsGSH/WindowsGSH.AbioticFactor",
+  "sourceUrl": "https://github.com/WindowsGSH/WindowsGSH.AbioticFactor",
+  "color": "#F0B323",
+  "moduleApiVersion": "1.0",
+  "minimumWindowsGshVersion": "0.1.0",
+  "type": "csharp",
+  "entry": "WindowsGSH.Modules.AbioticFactor.AbioticFactorModule",
+  "steam": {
+    "appId": "2857200",
+    "anonymous": true,
+    "validate": true
+  },
+  "entryPoints": {
+    "start": "AbioticFactor/Binaries/Win64/AbioticFactorServer-Win64-Shipping.exe",
+    "processName": "AbioticFactorServer-Win64-Shipping"
+  },
+  "runtime": {
+    "allowsEmbeddedConsole": true,
+    "portIncrements": 10,
+    "queryProtocol": "process",
+    "defaultArguments": ""
+  },
+  "capabilities": {
+    "directConnection": true
+  },
+  "configFields": [
+    {
+      "key": "server.name",
+      "label": "Server Name",
+      "type": "Text",
+      "defaultValue": "Abiotic Factor Server",
+      "required": true,
+      "group": "Server"
+    },
+    {
+      "key": "server.password",
+      "label": "Server Password",
+      "type": "Password",
+      "defaultValue": "",
+      "group": "Server"
+    },
+    {
+      "key": "server.world",
+      "label": "World Save Name",
+      "type": "Text",
+      "defaultValue": "Cascade",
+      "required": true,
+      "group": "Server"
+    },
+    {
+      "key": "server.maxPlayers",
+      "label": "Max Players",
+      "type": "Number",
+      "defaultValue": 6,
+      "required": true,
+      "minimum": 1,
+      "maximum": 24,
+      "group": "Server"
+    },
+    {
+      "key": "network.port",
+      "label": "Game Port",
+      "type": "Port",
+      "defaultValue": 7777,
+      "required": true,
+      "minimum": 1,
+      "maximum": 65535,
+      "group": "Network"
+    },
+    {
+      "key": "network.queryPort",
+      "label": "Steam Query Port",
+      "type": "Port",
+      "defaultValue": 27015,
+      "required": true,
+      "minimum": 1,
+      "maximum": 65535,
+      "group": "Network"
+    },
+    {
+      "key": "server.additionalArguments",
+      "label": "Additional Arguments",
+      "type": "CommandLine",
+      "defaultValue": "",
+      "group": "Launch"
+    },
+    {
+      "key": "gameplay.difficulty",
+      "label": "Game Difficulty",
+      "type": "Select",
+      "defaultValue": "1",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "group": "Gameplay",
+      "description": "1 = Normal, 2 = Hard, 3 = Apocalyptic."
+    },
+    {
+      "key": "gameplay.hardcore",
+      "label": "Hardcore Mode",
+      "type": "Boolean",
+      "defaultValue": false,
+      "group": "Gameplay"
+    },
+    {
+      "key": "gameplay.lootRespawn",
+      "label": "Enable Loot Respawn",
+      "type": "Boolean",
+      "defaultValue": false,
+      "group": "Gameplay"
+    },
+    {
+      "key": "gameplay.dayNightSpeed",
+      "label": "Day/Night Speed Multiplier",
+      "type": "Number",
+      "defaultValue": 1,
+      "minimum": 0.1,
+      "maximum": 3,
+      "group": "Gameplay"
+    },
+    {
+      "key": "gameplay.enemyHealthMultiplier",
+      "label": "Enemy Health Multiplier",
+      "type": "Number",
+      "defaultValue": 1,
+      "minimum": 0.1,
+      "maximum": 5,
+      "group": "Gameplay"
+    },
+    {
+      "key": "gameplay.playerXpMultiplier",
+      "label": "Player XP Multiplier",
+      "type": "Number",
+      "defaultValue": 1,
+      "minimum": 0.1,
+      "maximum": 5,
+      "group": "Gameplay"
+    }
+  ],
+  "ports": [
+    {
+      "id": "game",
+      "name": "Game Port",
+      "protocol": "udp",
+      "configField": "network.port",
+      "required": true
+    },
+    {
+      "id": "query",
+      "name": "Steam Query Port",
+      "protocol": "udp",
+      "configField": "network.queryPort",
+      "required": true
+    }
+  ],
+  "backupTargets": [
+    {
+      "key": "saved",
+      "label": "Saved Data",
+      "path": "AbioticFactor/Saved",
+      "type": "directory",
+      "required": true
+    }
+  ],
+  "addons": []
+}
